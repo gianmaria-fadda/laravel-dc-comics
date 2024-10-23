@@ -1,9 +1,10 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
-use App\Models\Comic;
 use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\Models\Comic;
 
 class ComicController extends Controller
 {
