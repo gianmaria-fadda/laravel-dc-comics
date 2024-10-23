@@ -11,6 +11,11 @@
             'active' => true,
         ],
         [
+            'url' => route('comics.index'),
+            'label' => 'Comics',
+            'active' => true,
+        ],
+        [
             'url' => '/contatti',
             'label' => 'Contatti',
             'active' => false,

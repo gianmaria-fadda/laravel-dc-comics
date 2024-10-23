@@ -7,6 +7,12 @@
     Laravel DC Comics
 </h1>
 
+<div class="mb-4">
+    <a href="{{ route('comics.create') }}" class="btn btn-success w-100">
+        + Clicca qui per Aggiungere
+    </a>
+</div>
+
 <table class="table">
     <thead>
       <tr>
