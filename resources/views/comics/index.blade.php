@@ -1,13 +1,10 @@
 @extends('layouts.app')
 
-@section('page-title', 'Home')
+@section('page-title', 'Laravel DC Comics')
 
 @section('main-content')
 <h1>
-    Laravel Start 1
+    Laravel DC Comics
 </h1>
 
-<h2>
-    Ciao {{ $firstName }} {{ $lastName }}
-</h2>
 @endsection
