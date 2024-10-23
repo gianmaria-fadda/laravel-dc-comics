@@ -13,7 +13,9 @@ class ComicController extends Controller
      */
     public function index()
     {
-        //
+        $comic = Comic::get();
+
+        return view('');
     }
 
     /**
