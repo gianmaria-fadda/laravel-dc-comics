@@ -46,7 +46,7 @@
 
       <div class="mb-3">
         <label for="artists" class="form-label">Artisti</label>
-        <textarea class="form-control" id="artists" name="artists" aria-describedby="artist-helper"> placeholder="Inserisci gli Artisti..."></textarea>
+        <textarea class="form-control" id="artists" name="artists" aria-describedby="artist-helper" placeholder="Inserisci gli Artisti..."></textarea>
         <div id="artist-helper" class="form-text">
             Inserisci i Nomi degli Artisti separati da una virgola
           </div>
@@ -54,7 +54,7 @@
 
       <div class="mb-3">
         <label for="writers" class="form-label">Scrittori</label>
-        <textarea class="form-control" id="writers" name="writers" aria-describedby="writers-helper"> placeholder="Inserisci gli Scrittori..."></textarea>
+        <textarea class="form-control" id="writers" name="writers" aria-describedby="writers-helper" placeholder="Inserisci gli Scrittori..."></textarea>
         <div id="writers-helper" class="form-text">
             Inserisci i Nomi degli Scrittori separati da una virgola
           </div>
