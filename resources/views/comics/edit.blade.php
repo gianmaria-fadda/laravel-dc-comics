@@ -103,6 +103,11 @@
       <div class="mb-3">
         <label for="writers" class="form-label">Scrittori</label>
         <textarea class="form-control @error('writers') is-invalid @enderror" id="writers" name="writers" aria-describedby="writers-helper" value="{{ $comic->writers }}" placeholder="Inserisci gli Scrittori..."></textarea>
+        @error('writers')
+          <div class="alert alert-danger mt-1">
+            Errore Data della Vendita: {{ $message }}
+          </div>
+        @enderror
         <div id="writers-helper" class="form-text">
             Inserisci i Nomi degli Scrittori separati da una virgola
           </div>
@@ -111,7 +116,12 @@
       <div class="mb-3">
         <label for="description" class="form-label">Descrizione <span class="text-danger">*</span></label>
         <textarea class="form-control @error('series') is-invalid @enderror"description id="description" name="description" rows="3" required maxlength="4096" value="{{ $comic->description }}" placeholder="Inserisci la Descrizione..."></textarea>
-      </div>
+        @error('description')
+        <div class="alert alert-danger mt-1">
+          Errore Data della Vendita: {{ $message }}
+        </div>
+      @enderror
+    </div>
 
       <div>
         <button type="submit" class="btn btn-warning w-100">
