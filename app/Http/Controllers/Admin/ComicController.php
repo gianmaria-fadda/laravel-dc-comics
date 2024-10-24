@@ -33,8 +33,9 @@ class ComicController extends Controller
     {
         $data = $request->all();
 
+        $comic = Comic::create($data);
 
-        $comic = new Comic ();
+        /*$comic = new Comic ();
         $comic->title = $data['title'];
         $comic->description = $data[ 'description'];
         $comic->thumb = $data ['thumb'];
@@ -48,7 +49,7 @@ class ComicController extends Controller
         $comic->artists = $jsonArtists;
         $correctWriters = str_replace(',', '|', $data['writers']);
         $comic->writers = $implodedWriters;
-        $comic->save();
+        $comic->save();*/
 
         return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
@@ -74,11 +75,11 @@ class ComicController extends Controller
      */
     public function update(Request $request, Comic $comic)
     {
-        $comic = Comic::findOrFail($comic->id);
-
         $data = $request->all();
+
+        $comic->update($data);
         
-        $comic->title = $data['title'];
+        /*$comic->title = $data['title'];
         $comic->description = $data[ 'description'];
         $comic->thumb = $data ['thumb'];
         $priceNumber = floatval($data['price']);
@@ -91,10 +92,9 @@ class ComicController extends Controller
         $comic->artists = $jsonArtists;
         $correctWriters = str_replace(',', '|', $data['writers']);
         $comic->writers = $correctWriters;
-        $comic->save();
+        $comic->save();*/
 
         return redirect()->route('comics.show', ['comic' => $comic->id]);
-
     }
 
     /**

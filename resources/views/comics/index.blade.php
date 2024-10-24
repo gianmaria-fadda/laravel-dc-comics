@@ -39,6 +39,9 @@
                     <a href="{{ route('comics.edit', ['comic' => $comic->id]) }}" class="btn btn-warning">
                         Modifica
                     </a>
+                    <a href="{{ route('comics.destroy', ['comic' => $comic->id]) }}" class="btn btn-danger">
+                        Elimina
+                    </a>
                 </td>
                 
             </tr>
