@@ -7,8 +7,9 @@
   Modifica {{ $comic->title }}
 </h1>
 
-<form action="{{ route('comics.store') }}" method="POST">
+<form action="{{ route('comics.update', ['comic' => $comic->id]) }}" method="POST">
     @csrf
+    @method('PUT')
 
     <div class="mb-3">
         <label for="title" class="form-label">Titolo <span class="text-danger">*</span></label>
@@ -38,9 +39,16 @@
       <div class="mb-3">
         <label for="type" class="form-label">Tipo <span class="text-danger">*</span></label>
         <select class="form-select" id="type" name="type">
-            <option select disabled>Seleziona un tipo...</option>
-            <option value="comic book">Fumetto</option>
-            <option value="graphic novel">Graphic Novel</option>
+            <option
+              @if($comic->type == 'Fumetto')
+                selected
+              @endif
+              value="comic book">Fumetto</option>
+            <option
+              @if($comic->type == 'Graphic Novel')
+                selected
+              @endif
+              value="graphic novel">Graphic Novel</option>
         </select>
       </div>
 
