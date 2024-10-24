@@ -50,7 +50,7 @@ class ComicController extends Controller
         $comic->writers = $implodedWriters;
         $comic->save();
 
-        return redirect()->route('comics.show', ['comic' => $comic.id]);
+        return redirect()->route('comics.show', ['comic' => $comic->id]);
     }
 
     /**
@@ -66,7 +66,7 @@ class ComicController extends Controller
      */
     public function edit(Comic $comic)
     {
-        //
+        return view('comics.edit');
     }
 
     /**
