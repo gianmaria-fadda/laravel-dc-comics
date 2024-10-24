@@ -24,14 +24,20 @@
             </li>
             <li>
                 Aritsti:
-                <ul>
-                    @php
-                        $decodedArtists =json_decode($comic->artists, true);
-                    @endphp
-                    @foreach ( $decodedArtists as $artist )
-                        {{ $artist }}
-                    @endforeach
-                </ul>
+                @php
+                    $decodedArtists = json_decode($comic->artists, true);
+                @endphp
+
+                @if(is_array($decodedArtists))
+                    <ul>
+                        @foreach($decodedArtists as $artist)
+                            <li>{{ $artist }}</li>
+                        @endforeach
+                    </ul>
+                @else
+                    <p>Nessun artista disponibile.</p>
+                @endif
+
             </li>
             <li>
                 Scrittori:

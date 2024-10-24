@@ -86,7 +86,7 @@ class ComicController extends Controller
         $comic->series = $data['series'];
         $comic->sale_date = $data['sale_date'];
         $comic->type = $data ['type'];
-        $explodArtists = json_encode(',', $data['artists']);
+        $explodArtists = json_encode($data['artists']);
         $jsonArtists = json_encode($explodArtists);
         $comic->artists = $jsonArtists;
         $correctWriters = str_replace(',', '|', $data['writers']);
